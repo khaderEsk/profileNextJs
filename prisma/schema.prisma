@@ -1,0 +1,69 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              Int         @id @default(autoincrement())
+  fullName        String      @map("full_name")
+  email           String      @unique
+  password        String
+  emailVerifiedAt DateTime?   @map("email_verified_at")
+  code            String?
+  phoneNumber     String      @map("phone_number")
+  rememberToken   String?     @map("remember_token")
+  isAdmin Int
+  createdAt       DateTime    @default(now()) @map("created_at")
+  updatedAt       DateTime    @updatedAt @map("updated_at")
+  flights         Flight[] // علاقة مع جدول flights
+  passengers      Passenger[] // علاقة مع جدول passengers
+
+  @@map("users")
+}
+
+model Flight {
+  id                Int         @id @default(autoincrement())
+  userId            Int         @map("user_id")
+  user              User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  statingPoint      Int         @map("statingPoint")
+  startingPoint     Governorate @relation("startingPoint", fields: [statingPoint], references: [id], onDelete: Cascade)
+  targetPoint       Int         @map("targetPoint")
+  targetGovernorate Governorate @relation("targetPoint", fields: [targetPoint], references: [id], onDelete: Cascade)
+  numberPassengers  Int         @map("numberPassengers")
+  startingTime      DateTime    @map("startingTime")
+  endingTime        DateTime    @map("endingTime")
+  createdAt         DateTime    @default(now()) @map("created_at")
+  updatedAt         DateTime    @updatedAt @map("updated_at")
+  passengers        Passenger[] // علاقة مع جدول passengers
+
+  @@map("flights")
+}
+
+model Governorate {
+  id              Int      @id @default(autoincrement())
+  name            String
+  startingFlights Flight[] @relation("startingPoint") // علاقة مع جدول flights كنقطة بداية
+  targetFlights   Flight[] @relation("targetPoint") // علاقة مع جدول flights كنقطة وصول
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+
+  @@map("governorates")
+}
+
+model Passenger {
+  id              Int      @id @default(autoincrement())
+  flightId        Int      @map("flight_id")
+  flight          Flight   @relation(fields: [flightId], references: [id], onDelete: Cascade)
+  userId          Int      @map("user_id")
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  numberPassenger Int      @map("numberPassenger")
+  status          Boolean
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+
+  @@map("passengers")
+}
