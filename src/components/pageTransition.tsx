@@ -2,8 +2,13 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
+import { ReactNode } from 'react'
 
-const pageTransition = ({ children = "" }) => {
+interface PageTransitionProps {
+  children: ReactNode
+}
+
+const pageTransition = ({ children }: PageTransitionProps) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const pathName = usePathname();
   return (
