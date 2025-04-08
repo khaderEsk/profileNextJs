@@ -1,7 +1,9 @@
 "use client"
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-const pageTransition = ({ children }) => {
+
+
+const pageTransition = ({ children = "" }) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const pathName = usePathname();
   return (

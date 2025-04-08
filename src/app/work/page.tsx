@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperType } from "swiper"
 import "swiper/css";
 
 import {
@@ -64,7 +65,7 @@ const projects = [
 
 const Work = () => {
     const [project, SetProject] = useState(projects[0]);
-    const handleSlideChange = (swiper) => {
+    const handleSlideChange = (swiper: SwiperType) => {
         const currentIndex = swiper.activeIndex;
         SetProject(projects[currentIndex])
     }
