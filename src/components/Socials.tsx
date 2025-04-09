@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { FaGithub, FaLinkedinIn, FaFacebookF, FaTwitter } from "react-icons/fa"
+import { FaGithub, FaLinkedinIn, FaFacebookF, FaTwitter, FaGoogleDrive } from "react-icons/fa"
 
 interface SocialsProps {
     containerStyles?: string
@@ -9,7 +9,7 @@ interface SocialsProps {
 const socials = [
     { icon: <FaGithub />, path: 'https://github.com/khaderEsk' },
     { icon: <FaLinkedinIn />, path: 'https://www.linkedin.com/in/khader-eskander-44a263303/' },
-    { icon: <FaFacebookF />, path: '/' },
+    { icon: <FaGoogleDrive />, path: 'https://drive.google.com/drive/folders/15_tZZiYrL-NSRxor6olNrq8mjnWwMgIB' },
     { icon: <FaTwitter />, path: '/' }
 ]
 
