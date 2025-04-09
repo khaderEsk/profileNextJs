@@ -4,8 +4,24 @@ import Socials from "@/components/Socials"
 import State from "@/components/State"
 import { Button } from "@/components/ui/button"
 import { FiDownload } from "react-icons/fi"
-
 const Home = () => {
+  // const [file, setFile] = useState("");
+  // const downloadFile = async () => {
+  //   if (file) {
+  //     const response = await fetch(file);
+  //     if (response.status !== 200) {
+  //       console.log("error");
+  //       return;
+  //     }
+  //     const blob = await response.blob();
+  //     const url= URL.createObjectURL(blob);
+  //     const a = document.createElement('a');
+  //     a.href =url;
+  //     a.download = 'Khader Eskander.pdf';
+  //     a.click();
+  //   }
+
+  // }
   return (
     <section className="h-full">
       <div className="container mx-auto h-full pb-10">
@@ -20,10 +36,16 @@ const Home = () => {
             </p>
 
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button variant="default" size="lg" className="uppercase flex items-center gap-2">
-                <span>Download CV</span>
-                <FiDownload className="text-xl" />
-              </Button>
+              <a
+                href="/Khader Eskander.pdf"
+                download="YourName_CV.pdf"
+                className="inline-block"
+              >
+                <Button variant="default" size="lg" className="uppercase flex items-center gap-2">
+                  <span>Download CV</span>
+                  <FiDownload className="text-xl" />
+                </Button>
+              </a>
               <div className="mb-8 xl:mb-0">
                 <Socials containerStyles="flex gap-8" iconStyles="w-9 h-9 border 
                 border-accent rounded-full flex justify-center items-center text-accent

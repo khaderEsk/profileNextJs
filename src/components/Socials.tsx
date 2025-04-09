@@ -8,7 +8,7 @@ interface SocialsProps {
 
 const socials = [
     { icon: <FaGithub />, path: 'https://github.com/khaderEsk' },
-    { icon: <FaLinkedinIn />, path: '/' },
+    { icon: <FaLinkedinIn />, path: 'https://www.linkedin.com/in/khader-eskander-44a263303/' },
     { icon: <FaFacebookF />, path: '/' },
     { icon: <FaTwitter />, path: '/' }
 ]
