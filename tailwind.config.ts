@@ -11,7 +11,7 @@ export default {
 		container: {
 			center: true,
 			padding: "15px", screens: {
-				'2xl': '1000px', // سيتم تطبيق max-width: 1200px عند 1200px فما فوق
+				'2xl': '1200px', // سيتم تطبيق max-width: 1200px عند 1200px فما فوق
 			},
 		},
 		screens: {

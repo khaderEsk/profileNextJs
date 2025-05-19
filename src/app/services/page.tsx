@@ -18,13 +18,13 @@ const Service = [
     {
         num: "03",
         title: "Frontend Development",
-        description: "We provide the best web development services to our clients. Our team of experts will",
+        description: "We provide the best and most interactive front-end to our clients.",
         href: ""
     },
     {
         num: "04",
         title: "SOE",
-        description: "We provide the best web development services to our clients. Our team of experts will",
+        description: "improving a website’s visibility and ranking on search engines like Google, Bing, or Yahoo. The higher a website ranks in search results, the more likely it is to receive organic traffic.",
         href: ""
     },
 ]

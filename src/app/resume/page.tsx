@@ -11,7 +11,7 @@ import { SiTailwindcss, SiNextdotjs } from 'react-icons/si';
 
 const about = {
     title: "About Me",
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit",
+    description: "",
     info: [
         {
             fieldName: "Name",
@@ -27,7 +27,7 @@ const about = {
         },
         {
             fieldName: "GitHub",
-            fieldValue: "/",
+            fieldValue: "https://github.com/khaderEsk",
         },
         {
             fieldName: "Nationality",
@@ -51,7 +51,7 @@ const about = {
 const experience = {
     icon: '/assets/resume/badge.svg',
     title: "My experience",
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit",
+    description: "With 3 years of experience in full-stack web development, I specialize in building responsive, scalable, and user-friendly web applications from concept to deployment. My expertise spans both front-end and back-end technologies, allowing me to deliver end-to-end solutions tailored to clients' needs",
     item: [
         {
             company: "Tech Solutions Inc.",
@@ -74,15 +74,20 @@ const experience = {
 const education = {
     icon: '/assets/resume/cap.svg',
     title: "My education",
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit",
+    description: "I got my bachelor's degree in information engineering from Damascus University.",
     item: [
         {
-            institution: "Online Course platform",
-            degree: "Full stack Wed Development Bootcamp",
-            duration: "2022"
+            institution: "Damascus University",
+            degree: "information technology engineering",
+            duration: "2018-2024"
         },
         {
-            institution: "CodeCademy",
+            institution: "Online Course platform",
+            degree: "BackEnd Development",
+            duration: "2021"
+        },
+        {
+            institution: "Code Cademy",
             degree: "FrontEnd Track",
             duration: "2023"
         },
@@ -92,19 +97,9 @@ const education = {
             duration: "2020 -2021"
         },
         {
-            institution: "CodeCademy",
-            degree: "FrontEnd Track",
-            duration: "2023"
-        },
-        {
-            institution: "Tech Institute",
-            degree: "Certified Web Developer",
-            duration: "2021"
-        },
-        {
-            institution: "Information Technology Engineer",
-            degree: "Associate Degree in Computer Science",
-            duration: "2019-2024"
+            institution: "Organization Shaza Al-SHAM",
+            degree: "Al-Amin Program",
+            duration: "2024"
         }
     ]
 }
@@ -195,7 +190,7 @@ const Resume = () => {
                                 </ScrollArea>
                             </div>
                         </TabsContent>
-                        <TabsContent value='education' className='w-full '>
+                        <TabsContent value='education' className='w-full'>
                             <div className='flex flex-col gap-[30px] text-center xl:text-left'>
                                 <h3 className='text-4xl font-bold'>
                                     {education.title}
@@ -244,7 +239,7 @@ const Resume = () => {
                                                                 {skill.icon}
 
                                                             </div>
-                                                            
+
                                                         </TooltipTrigger>
                                                         <TooltipContent>
                                                             <p className='capitalize'>

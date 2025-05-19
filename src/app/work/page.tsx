@@ -21,45 +21,49 @@ import WorkSlideBtn from "@/components/WorkSlideBtn";
 const projects = [
     {
         num: "01",
-        category: "Frontend",
+        category: "Full Stack",
         title: "project 1",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        description: "Developed a Advertising promotion website was developed, Provides advertising display services through games on the site. Integrated an online booking system, allowing customers to withdraw profits from the site's games via electronic wallet. Designed a modern, mobile-friendly interface for a seamless user experience. Implemented SEO optimization, targeting Advertising promotion keywords to boost search engine rankings.",
         stack: [
             { name: "HTML5" },
             { name: "Css" },
-            { name: "Js" },
-            { name: "Node" },
+            { name: "JavaScript" },
+            { name: "php" },
+            { name: "laravel" },
+            { name: "MySql" },
         ],
-        image: '/assets/work/thumb1.png',
+        image: '/assets/work/game.png',
         live: "",
-        github: ""
+        github: "https://github.com/khaderEsk/games.git"
     }, {
         num: "02",
-        category: "Frontend",
+        category: "Full Stack",
         title: "project 2",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        description: "Developed a skin care website was developed, offering cosmetics display and purchase services. Integrated an online booking system, allowing customers to purchase through the website and pay via PayPal. Designed a modern, mobile-friendly interface for a seamless user experience. Implemented SEO optimization, targeting skin care-related keywords to boost search engine rankings.",
         stack: [
             { name: "HTML5" },
-            { name: "Css" },
             { name: "Javascript" },
+            { name: "bootstrap" },
+            { name: "php" },
+            { name: "laravel" },
+            { name: "MySql" },
         ],
-        image: '/assets/work/thumb2.png',
+        image: '/assets/work/greenHarvest.png',
         live: "",
-        github: ""
+        github: "https://github.com/khaderEsk/GreenHaevest.git"
     }, {
         num: "03",
-        category: "Frontend",
+        category: "Backend",
         title: "project 3",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        description: "Developed a Educational application was developed, Provides Various educational services, including video calls and scheduling educational appointments and organizing study programs. Integrated an online booking system, allowing customers to withdraw profits from the site's games via electronic wallet. Designed a modern, mobile-friendly interface for a seamless user experience. Implemented SEO optimization, targeting Educational, organizing study programs keywords to boost search engine rankings.",
         stack: [
-            { name: "HTML5" },
-            { name: "Css" },
-            { name: "Js" },
-            { name: "Next.js" },
+            { name: "Php" },
+            { name: "Laravel" },
+            { name: "MySQL" },
         ],
-        image: '/assets/work/thumb3.png',
+        image: '/assets/work/Project3.png',
         live: "",
-        github: ""
+        github: "https://github.com/khaderEsk/Educational1.git"
     },
 ]
 

@@ -5,39 +5,22 @@ import State from "@/components/State"
 import { Button } from "@/components/ui/button"
 import { FiDownload } from "react-icons/fi"
 const Home = () => {
-  // const [file, setFile] = useState("");
-  // const downloadFile = async () => {
-  //   if (file) {
-  //     const response = await fetch(file);
-  //     if (response.status !== 200) {
-  //       console.log("error");
-  //       return;
-  //     }
-  //     const blob = await response.blob();
-  //     const url= URL.createObjectURL(blob);
-  //     const a = document.createElement('a');
-  //     a.href =url;
-  //     a.download = 'Khader Eskander.pdf';
-  //     a.click();
-  //   }
-
-  // }
   return (
     <section className="h-full">
       <div className="container mx-auto h-full pb-10">
         <div className="flex flex-col items-center justify-between xl:flex-row xl:pt-3 xl:pb-19">
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Software Developer</span>
+            <span className="text-xl">Junior FullStack ||Software Engineering</span>
             <h2 className="h222 mb-6">Hello I&apos;m
               <br /> <span className="text-accent">Khader Eskander</span>
             </h2>
             <p className="max-2-[500px] mb-9 text-white/80">
-              I hold the Information Technology Engineering Certificate for Software Engineering in 2024
+            Back-end developer with an information engineering background, specializing in information systems engineering.
             </p>
 
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <a
-                href="/Khader Eskander.pdf"
+                href="/Khader Ali Eskander.pdf"
                 download="YourName_CV.pdf"
                 className="inline-block"
               >
