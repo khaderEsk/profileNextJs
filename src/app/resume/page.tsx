@@ -4,15 +4,16 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { ScrollArea } from '@radix-ui/react-scroll-area';
 import { motion } from 'framer-motion';
-import { FaLaravel, FaHtml5, FaCss3, FaPhp, FaGithub, FaGitlab, FaJava, FaGit, FaDocker } from 'react-icons/fa';
+import { FaLaravel, FaHtml5, FaCss3, FaPhp, FaGithub, FaGitlab, FaJava, FaGit, FaDocker, FaNodeJs } from 'react-icons/fa';
 import { RiNextjsFill } from "react-icons/ri";
 import { IoLogoFirebase, IoLogoVercel } from "react-icons/io5";
 import { MdDragIndicator, MdOutlineSettingsApplications } from "react-icons/md";
 
 import { IoLogoJavascript } from 'react-icons/io';
 
-import { SiTailwindcss, SiFastapi, SiMysql, SiPostgresql, SiPrisma, SiLaravel, SiJira } from 'react-icons/si';
+import { SiTailwindcss, SiFastapi, SiMysql, SiPostgresql, SiPrisma, SiLaravel, SiJira, SiTypescript } from 'react-icons/si';
 import { DiScrum } from "react-icons/di";
+import Link from 'next/link';
 
 const about = {
     title: "About Me",
@@ -114,21 +115,24 @@ const skills = {
     item: [
         {
             icon: <IoLogoJavascript />,
-            name: "JavaScript"
+            name: "JavaScript",
+            href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        },
+        {
+            icon: <SiTypescript />,
+            name: "Type Script",
+            href: "http://typescriptlang.org/"
         },
         {
             icon: <FaPhp />,
-            name: "Php"
+            name: "Php",
+            href: "https://www.php.net/"
         },
         {
             icon: <FaJava />,
-            name: "Java"
-        },
-        {
-            icon: <RiNextjsFill />,
-            name: "Next.js"
-        },
-
+            name: "Java",
+            href: "https://www.oracle.com/java/technologies/java-se-glance.html"
+        }
     ]
 }
 
@@ -137,19 +141,23 @@ const skillsWeb = {
     item: [
         {
             icon: <FaHtml5 />,
-            name: "html5"
+            name: "html",
+            href: "https://developer.mozilla.org/en-US/docs/Web/HTML"
         },
         {
             icon: <FaCss3 />,
-            name: "Css3"
+            name: "Css",
+            href: "https://developer.mozilla.org/en-US/docs/Web/CSS"
         },
         {
             icon: <MdOutlineSettingsApplications />,
-            name: "Rest Full API"
+            name: "Rest Full API",
+            href: "https://restfulapi.net/"
         },
         {
             icon: <SiTailwindcss />,
-            name: "Tailwind.css"
+            name: "Tailwind.css",
+            href: "https://tailwindcss.com/"
         }
     ]
 }
@@ -159,19 +167,29 @@ const skillsFrameworks = {
     item: [
         {
             icon: <FaLaravel />,
-            name: "Laravel"
+            name: "Laravel",
+            href: "https://laravel.com/docs/11.x"
         },
         {
             icon: <RiNextjsFill />,
-            name: "Next js"
+            name: "Next js",
+            href: "https://nextjs.org/"
         },
         {
             icon: <IoLogoFirebase />,
-            name: "Firebase"
+            name: "Firebase",
+            href: "https://firebase.google.com/"
         },
         {
             icon: <SiFastapi />,
-            name: "Fast API "
+            name: "Fast API ",
+            href: "https://fastapi.tiangolo.com/"
+        }
+        ,
+        {
+            icon: <FaNodeJs />,
+            name: "Node.js ",
+            href: "https://nodejs.org/en"
         }
     ]
 }
@@ -181,19 +199,23 @@ const skillsDatabases = {
     item: [
         {
             icon: <SiMysql />,
-            name: "MySQL"
+            name: "MySQL",
+            href: "https://www.mysql.com/"
         },
         {
             icon: <SiPostgresql />,
-            name: "PostgreSQL"
+            name: "PostgreSQL",
+            href: "https://www.postgresql.org/"
         },
         {
             icon: <SiPrisma />,
-            name: "Prisma"
+            name: "Prisma",
+            href: "https://www.prisma.io/"
         },
         {
             icon: <SiLaravel />,
-            name: "Eloquent"
+            name: "Eloquent",
+            href: "https://laravel.com/docs/12.x/eloquent"
         }
     ]
 }
@@ -203,15 +225,18 @@ const skillsControl = {
     item: [
         {
             icon: <FaGit />,
-            name: "Git "
+            name: "Git ",
+            href: "https://git-scm.com/"
         },
         {
             icon: <FaGitlab />,
-            name: "Gitlab "
+            name: "Gitlab ",
+            href: "https://about.gitlab.com/"
         },
         {
             icon: <FaGithub />,
-            name: "Github "
+            name: "Github ",
+            href: "https://github.com/"
         }
     ]
 }
@@ -221,15 +246,18 @@ const skillsManagement = {
     item: [
         {
             icon: <MdDragIndicator />,
-            name: "Agile  "
+            name: "Agile",
+            href: "https://agilemanifesto.org/"
         },
         {
             icon: <SiJira />,
-            name: "Jira  "
+            name: "Jira",
+            href: "https://www.atlassian.com/software/jira"
         },
         {
             icon: <DiScrum />,
-            name: "Scrum "
+            name: "Scrum ",
+            href: "https://www.scrum.org/"
         }
     ]
 }
@@ -239,11 +267,13 @@ const skillsDevOps = {
     item: [
         {
             icon: <FaDocker />,
-            name: "Docker "
+            name: "Docker",
+            href: ""
         },
         {
             icon: <IoLogoVercel />,
-            name: "Vercel  "
+            name: "Vercel",
+            href: ""
         }
     ]
 }
@@ -337,7 +367,7 @@ const Resume = () => {
                                 <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
                                     {skills.item.map((skill, index) => {
                                         return (
-                                            <li key={index}>
+                                            <Link key={index} href={skill.href} target='_blank'>
                                                 <TooltipProvider delayDuration={100}>
                                                     <Tooltip>
                                                         <TooltipTrigger className='w-full h-[150px] bg-[#232329] rounded-xl flex flex-1 justify-center items-center group'>
@@ -354,7 +384,7 @@ const Resume = () => {
                                                         </TooltipContent>
                                                     </Tooltip>
                                                 </TooltipProvider>
-                                            </li>
+                                            </Link>
 
                                         )
                                     })}
@@ -370,7 +400,7 @@ const Resume = () => {
                                 <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
                                     {skillsWeb.item.map((skill, index) => {
                                         return (
-                                            <li key={index}>
+                                            <Link key={index} href={skill.href} target='_blank'>
                                                 <TooltipProvider delayDuration={100}>
                                                     <Tooltip>
                                                         <TooltipTrigger className='w-full h-[150px] bg-[#232329] rounded-xl flex flex-1 justify-center items-center group'>
@@ -387,7 +417,7 @@ const Resume = () => {
                                                         </TooltipContent>
                                                     </Tooltip>
                                                 </TooltipProvider>
-                                            </li>
+                                            </Link>
 
                                         )
                                     })}
@@ -403,7 +433,7 @@ const Resume = () => {
                                 <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
                                     {skillsFrameworks.item.map((skill, index) => {
                                         return (
-                                            <li key={index}>
+                                            <Link key={index} href={skill.href} target='_blank'>
                                                 <TooltipProvider delayDuration={100}>
                                                     <Tooltip>
                                                         <TooltipTrigger className='w-full h-[150px] bg-[#232329] rounded-xl flex flex-1 justify-center items-center group'>
@@ -420,7 +450,7 @@ const Resume = () => {
                                                         </TooltipContent>
                                                     </Tooltip>
                                                 </TooltipProvider>
-                                            </li>
+                                            </Link>
 
                                         )
                                     })}
@@ -436,7 +466,7 @@ const Resume = () => {
                                 <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
                                     {skillsDatabases.item.map((skill, index) => {
                                         return (
-                                            <li key={index}>
+                                            <Link key={index} href={skill.href} target='_blank'>
                                                 <TooltipProvider delayDuration={100}>
                                                     <Tooltip>
                                                         <TooltipTrigger className='w-full h-[150px] bg-[#232329] rounded-xl flex flex-1 justify-center items-center group'>
@@ -453,7 +483,7 @@ const Resume = () => {
                                                         </TooltipContent>
                                                     </Tooltip>
                                                 </TooltipProvider>
-                                            </li>
+                                            </Link>
 
                                         )
                                     })}
@@ -469,7 +499,7 @@ const Resume = () => {
                                 <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
                                     {skillsControl.item.map((skill, index) => {
                                         return (
-                                            <li key={index}>
+                                            <Link key={index} href={skill.href} target='_blank'>
                                                 <TooltipProvider delayDuration={100}>
                                                     <Tooltip>
                                                         <TooltipTrigger className='w-full h-[150px] bg-[#232329] rounded-xl flex flex-1 justify-center items-center group'>
@@ -486,7 +516,7 @@ const Resume = () => {
                                                         </TooltipContent>
                                                     </Tooltip>
                                                 </TooltipProvider>
-                                            </li>
+                                            </Link>
 
                                         )
                                     })}
@@ -502,7 +532,7 @@ const Resume = () => {
                                 <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
                                     {skillsManagement.item.map((skill, index) => {
                                         return (
-                                            <li key={index}>
+                                            <Link key={index} href={skill.href} target='_blank'>
                                                 <TooltipProvider delayDuration={100}>
                                                     <Tooltip>
                                                         <TooltipTrigger className='w-full h-[150px] bg-[#232329] rounded-xl flex flex-1 justify-center items-center group'>
@@ -519,7 +549,7 @@ const Resume = () => {
                                                         </TooltipContent>
                                                     </Tooltip>
                                                 </TooltipProvider>
-                                            </li>
+                                            </Link>
 
                                         )
                                     })}
@@ -535,7 +565,7 @@ const Resume = () => {
                                 <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
                                     {skillsDevOps.item.map((skill, index) => {
                                         return (
-                                            <li key={index}>
+                                            <Link key={index} href={skill.href} target='_blank'>
                                                 <TooltipProvider delayDuration={100}>
                                                     <Tooltip>
                                                         <TooltipTrigger className='w-full h-[150px] bg-[#232329] rounded-xl flex flex-1 justify-center items-center group'>
@@ -552,7 +582,7 @@ const Resume = () => {
                                                         </TooltipContent>
                                                     </Tooltip>
                                                 </TooltipProvider>
-                                            </li>
+                                            </Link>
 
                                         )
                                     })}
